@@ -19,3 +19,12 @@ resource "aws_subnet" "main1" {
     Name = "Main1"
   }
 }
+
+resource "aws_subnet" "main2" {
+  vpc_id     = aws_vpc.default.id
+  cidr_block = "1.2.3.0/24"
+
+  tags = {
+    Name = "Main2"
+  }
+}
